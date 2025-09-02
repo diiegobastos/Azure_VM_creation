@@ -188,10 +188,10 @@ Este guia detalha o processo completo para criar uma Máquina Virtual (VM) no Mi
 - **Backup**: Configure Azure Backup
 - **Monitoramento**: Configure alertas
 
-## Métodos Alternativos de Criação
+## Métodos Alternativos de Criação além do Portal do Azure
 
 ### Azure CLI
-```bash
+
 # Criar grupo de recursos
 az group create --name myResourceGroup --location eastus
 
@@ -202,16 +202,16 @@ az vm create \
   --image UbuntuLTS \
   --admin-username azureuser \
   --generate-ssh-keys
-```
+
 
 ### Azure PowerShell
-```powershell
+
 # Criar grupo de recursos
 New-AzResourceGroup -Name "myResourceGroup" -Location "East US"
 
 # Criar VM
 New-AzVM -ResourceGroupName "myResourceGroup" -Name "myVM" -Location "East US" -VirtualNetworkName "myVnet" -SubnetName "mySubnet" -SecurityGroupName "myNetworkSecurityGroup" -PublicIpAddressName "myPublicIpAddress"
-```
+
 
 ### ARM Template
 - Templates JSON para automação
@@ -259,11 +259,3 @@ New-AzVM -ResourceGroupName "myResourceGroup" -Name "myVM" -Location "East US" -
 - **Activity Log**: Para mudanças de configuração
 - **Metrics**: Para monitoramento de performance
 - **Azure Monitor**: Para alertas e dashboards
-
-## Conclusão
-
-A criação de VMs no Azure é um processo flexível que permite desde configurações simples até implementações complexas. Seguindo este guia e as boas práticas recomendadas, você terá uma base sólida para deploy e gerenciamento de máquinas virtuais na nuvem Azure.
-
----
-
-**Lembre-se**: Sempre teste em ambiente de desenvolvimento antes de implementar em produção! 🚀
